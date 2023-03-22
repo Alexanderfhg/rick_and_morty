@@ -1,38 +1,75 @@
 .App {
-  text-align: center;
+   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body {
+   background-image: url(components/27347-rick-y-morty.jpg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.cardContainer {
+   display: flex;
+}
+.cards{
+   display: flex;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 0.5rem;
+   color: black;
+   align-items: center;
+   text-align: center;
+}
+
+.card {
+   background-color: #97ce4c;
+   width: 300px;
+   height: 480px;
+   transition: all 0.2s;
+   position: relative;
+   cursor: pointer;
+   -webkit-margin-start: 3.8rem;
+   margin-top: 4rem;
+   border-radius: 3rem;
+   box-shadow: 15px 15px 30px #44281d,
+             -15px -15px 30px #97ce4c;
+             padding: 5px;
+  background-image: linear-gradient(144deg,#97ce4c, #f0e14a 70%,#97ce4c);
+ }
+
+ .card:hover {
+   transform: scale(1.05);
+ }
+
+ .cardImg {
+   border-radius: 2rem;
+}
+
+
+/* Close button */
+
+.button {
+   background-color: #288ea0;
+   border: none;
+   padding: 0.75rem;
+   font-size: 0.7rem;
+   width: 3rem;
+   border-radius: 1.5rem;
+   color: #97ce4c;
+   cursor: pointer;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  button:active {
+   color: white;
+   box-shadow: 0 0.2rem #dfd9d9;
+   transform: translateY(0.2rem);
   }
-  to {
-    transform: rotate(360deg);
+  
+  button:hover {
+   background: lightcoral;
+   color: white;
+   transition-duration: 0.17s;
+   
   }
-}
+  
+  button:disabled {
+   cursor: auto;
+   color: grey;
+  }
