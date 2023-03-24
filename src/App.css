@@ -3,14 +3,18 @@
 }
 
 .body {
-   background-image: url(components/27347-rick-y-morty.jpg);
+   background-image: url(../img/27347-rick-y-morty.jpg);
 }
 
 .cardContainer {
    display: flex;
+   justify-content: center;
+   
+   flex-wrap: wrap;
 }
 .cards{
    display: flex;
+   flex-wrap: wrap;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 0.5rem;
    color: black;
@@ -21,7 +25,7 @@
 .card {
    background-color: #97ce4c;
    width: 300px;
-   height: 480px;
+   height: 471.2px;
    transition: all 0.2s;
    position: relative;
    cursor: pointer;
@@ -35,18 +39,15 @@
  }
 
  .card:hover {
-   transform: scale(1.05);
+   transform: scale(1.09);
  }
 
  .cardImg {
-   border-radius: 2rem;
+   border-radius: 3rem;
 }
 
-
-/* Close button */
-
 .button {
-   background-color: #288ea0;
+   background-color: #5e4dcd;
    border: none;
    padding: 0.75rem;
    font-size: 0.7rem;
@@ -73,3 +74,43 @@
    cursor: auto;
    color: grey;
   }
+
+  .input-group {
+   margin-top: 4rem;
+   align-items: center;
+   margin-bottom: 2rem;
+ }
+ 
+ .input {
+   min-height: 50px;
+   max-width: 100px;
+   padding: 0 1rem;
+   color: #fff;
+   font-size: 15px;
+   border: 1px solid #5e4dcd;
+   border-radius: 6px 0 0 6px;
+   background-color: transparent;
+   text-align: center;
+ }
+ 
+ .button--submit {
+   min-height: 50px;
+   padding: .5em 1em;
+   border: none;
+   border-radius: 0 6px 6px 0;
+   background-color: #5e4dcd;
+   color: #fff;
+   font-size: 15px;
+   cursor: pointer;
+   transition: background-color .3s ease-in-out;
+ }
+ 
+ .button--submit:hover {
+   background-color: #5e5dcd;
+ }
+ 
+ .input:focus, .input:focus-visible {
+   border-color: #3898EC;
+   outline: none;
+ }
+ 
