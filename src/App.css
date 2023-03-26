@@ -9,7 +9,6 @@
 .cardContainer {
    display: flex;
    justify-content: center;
-   
    flex-wrap: wrap;
 }
 .cards{
@@ -29,7 +28,7 @@
    transition: all 0.2s;
    position: relative;
    cursor: pointer;
-   -webkit-margin-start: 3.8rem;
+   margin-left: 3.8rem;
    margin-top: 4rem;
    border-radius: 3rem;
    box-shadow: 15px 15px 30px #44281d,
@@ -113,4 +112,3 @@
    border-color: #3898EC;
    outline: none;
  }
- 

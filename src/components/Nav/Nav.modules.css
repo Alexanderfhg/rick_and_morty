@@ -1,0 +1,28 @@
+.button {
+    background-color: #5e4dcd;
+    border: none;
+    padding: 0.75rem;
+    font-size: 0.7rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    color: #97ce4c;
+    cursor: pointer;
+   }
+   
+   button:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   button:hover {
+    background: lightcoral;
+    color: white;
+    transition-duration: 0.17s;
+    
+   }
+   
+   button:disabled {
+    cursor: auto;
+    color: grey;
+   }

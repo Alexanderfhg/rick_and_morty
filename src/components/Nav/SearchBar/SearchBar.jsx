@@ -4,7 +4,6 @@ export default function SearchBar(props) {
    const [search, setSearch] = useState(""); 
    
    function handleChange (event) {
-      console.log(event.target.value)
       setSearch(event.target.value)
    }
 
