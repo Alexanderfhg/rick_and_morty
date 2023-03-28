@@ -7,31 +7,32 @@ export default function Detail(props) {
     const [Character, setCharacter] = useState({});
     const navigate = useNavigate();
 
-    const backToHome = () => {
-        navigate("/home");
-    }
-
     useEffect(() => {
         fetch(`https://rickandmortyapi.com/api/character/${id}`)
-        .then((response)=> response.json())
-        .then((char) => {
-            if (char.name) {
-                setCharacter(char);
-            } else {
-                window.alert("There aren't characters with this ID");
-            }
-        });
+            .then((response) => response.json())
+            .then((char) => {
+                if (char.name) {
+                    setCharacter(char);
+                } else {
+                    window.alert("There aren't characters with this ID");
+                }
+            });
         return setCharacter({});
     }, [id]);
 
     return (
-        <div>
-            <button onClick={backToHome}>Back</button>
-            <h1>{Character.name}</h1>
-            <h1>{Character.status}</h1>
-            <h1>{Character.specie}</h1>
-            <h1>{Character.gender}</h1>
-            <img src={Character.image} alt={Character.name} />
+        <div className={styles.div}>
+            <div className={styles.container}>
+                <div className={styles.dataContainer}>
+                    <h1>Name: {Character.name}</h1>
+                    <h1>Status: {Character.status}</h1>
+                    <h1>Specie: {Character.species}</h1>
+                    <h1>Gender: {Character.gender}</h1>
+                </div>
+                <div className={styles.imgContainer}>
+                    <img src={Character.image} alt={Character.name} />
+                </div>
+            </div>
         </div>
     )
 }

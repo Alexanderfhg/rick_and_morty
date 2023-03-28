@@ -1,30 +1,63 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import About from './components/About/About'
 import Detail from './components/Detail/Detail'
-// import Card from './components/Card.jsx';
 import Cards from './components/Cards/Cards';
-// import SearchBar from './components/SearchBar.jsx';
-// import characters from './data.js';
 import Nav from './components/Nav/Nav';
-import { Routes, Route } from 'react-router-dom';
-
-
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import Form from './components/Form/Form'
 
 function App() {
 
-   const [characters, setCharacters] = useState([])
+   const [characters, setCharacters] = useState([]);
+   const [access, setAccess] = useState(false);
+   const location = useLocation();
+   const navigate = useNavigate();
 
-   function onSearch(text) {
-         fetch(`https://rickandmortyapi.com/api/character/${text}`)
-      .then((response) => response.json())
-      .then((data) => {
-         if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            window.alert("There are no characters with this ID");
+   const EMAIL = "0freddyherrera0@gmail.com";
+   const PASSWORD = "asdf321";
+
+   function login(userData) {
+      if (userData.email === EMAIL && userData.password === PASSWORD) {
+         setAccess(true);
+         navigate('/home');
+      } else {
+         window.alert("Usuario y/o constraseña incorrectos")
+      }
+   }
+
+   function logOut() {
+      setAccess(false);
+   }
+
+   useEffect(() => {
+      !access && navigate('/');
+   }, [access]);
+
+   //  Hay 826 personajes en total
+   function onSearch(id) {
+      let flag = true;
+      characters.map(character => {
+         if(character.id == id){
+            flag = false;
          }
-      });
+      })
+
+      if(flag === true){
+         fetch(`https://rickandmortyapi.com/api/character/${id}`)
+         .then((response) => response.json())
+         .then((data) => {
+            if (data.name) {
+               setCharacters((oldChars) => [...oldChars, data]);
+            } else {
+               window.alert("No hay carácteres con ese ID");
+            }
+         });
+      } else {
+         window.alert("Esta carta ya se encuentra en tu colección, ¡sigue buscando nuevas!")
+      }
+      
+
    }
 
    function onClose(id) {
@@ -33,8 +66,9 @@ function App() {
 
    return (
       <div className='App'>
-         <Nav onSearch={onSearch} />
+         {location.pathname !== '/' && <Nav logOut={logOut} onSearch={onSearch} />}
          <Routes>
+            <Route path="/" element={<Form login={login} />} />
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
             <Route path="/about" element={<About />} />
             <Route path="/detail/:id" element={<Detail />} />

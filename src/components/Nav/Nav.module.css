@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 1);
+    background: rgba(24, 20, 20, 1);
+    align-items: center;
+    border-radius: 6rem;
+    margin-top: 2rem;
+    z-index: 9999;
+    top: 0;
+}
+
+.container button img {
+    display: block;
+    height: 140px;
+}
+
+.butImg {
+    background-color: transparent;
+    border: 0;
+    margin-left: 5rem;
+    cursor: pointer;
+}
+
+.container button img:hover {
+    transform: scale(1.08);
+    transition-duration: 0.17s;
+}
+
+.container button img:not(:hover) {
+    transform: scale(1);
+    transition-duration: 0.17s;
+}
+
+.container button img:active {
+    transform: translateY(0);
+}
+
+.button {
+
+    transform: translateX(89rem);
+    display: flex;
+    background-color: #5e4dcd;
+    border: none;
+    padding: 0.9rem;
+    font-size: 0.7rem;
+    width: 6rem;
+    border-radius: .7rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 50px;
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.button:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+}
+
+.button:hover {
+    background: lightcoral;
+    color: white;
+    transition-duration: 0.17s;
+}
+
+.button:disabled {
+    cursor: auto;
+    color: grey;
+}

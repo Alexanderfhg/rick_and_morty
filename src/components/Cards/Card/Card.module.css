@@ -1,0 +1,68 @@
+.buttonContainer {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.card {
+    align-content: center;
+    background-color: #97ce4c;
+    width: 300px;
+    height: 450px;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3.8rem;
+    margin-top: 4rem;
+    border-radius: 3rem;
+    box-shadow: 15px 15px 30px #44281d,
+        -15px -15px 30px #97ce4c;
+    padding: 5px;
+    background-image: linear-gradient(144deg, #97ce4c, #f0e14a 70%, #97ce4c);
+}
+
+.card button h2 {
+    font-family: "get schwifty";
+    font-size: 35px;
+    margin-top: -.01rem;
+}
+
+.card:hover {
+    transform: scale(1.09);
+}
+
+.cardImg {
+    margin-top: -1rem;
+    border-radius: 3rem;
+    margin-left: -.18rem;
+    width: 18.6rem;
+}
+
+.closeButton {
+    background-color: #5e4dcd;
+    border: none;
+    padding: 0.75rem;
+    font-size: 0.7rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    color: #97ce4c;
+    cursor: pointer;
+}
+
+.closeButton:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+
+.closeButton:hover {
+    background: lightcoral;
+    color: white;
+    transition-duration: 0.17s;
+
+}
+
+.closeButton:disabled {
+    cursor: auto;
+    color: grey;
+}
