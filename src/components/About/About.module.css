@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aboutContainer {
+    display: flex;
+    margin-top: 180px;
+    color: white;
+    align-content: center;
+    justify-content: center;
+    height: 550px;
+    width: 55%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 1);
+    background: rgba(24, 20, 20, 0.99);
+    border-radius: 6rem;
+    flex-wrap: wrap;
+}
+
+.aboutContainer p {
+    margin-left: 10%;
+    margin-right: 10%;
+}

@@ -12,12 +12,19 @@ export default function Nav(props) {
 
     return (
         <div className={styles.container}>
-            <button className={styles.butImg} onClick={goHome}>
-                <img src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="Welcome" />
-            </button>
-            <SearchBar onSearch={props.onSearch} />
-            <button onClick={goAbout} className={styles.button}>About</button>
-            <button onClick={props.logOut} className={styles.button}>Log out</button>
+            <div className={styles.homeButtonContainer}>
+                <button className={styles.butImg} onClick={goHome}>
+                    <img src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-portal-shoes-white-clothing-zavvi-23.png" alt="Welcome" />
+                </button>
+            </div>
+            <div className={styles.searchBarContainer}>
+                <button onClick={props.randomChar} className={styles.button}>Personaje Aleatorio</button>
+                <SearchBar onSearch={props.onSearch} />
+            </div>
+            <div className={styles.otherButtonsContainer}>
+                <button onClick={goAbout} className={styles.button}>About</button>
+                <button onClick={props.logOut} className={styles.button}>Log out</button>
+            </div>
         </div>
     )
 }

@@ -1,44 +1,39 @@
 .container {
     display: flex;
     margin-top: 220px;
-    background-color: black;
-    /* align-items: center; */
     align-content: center;
-    justify-content: center;
-    height: 600px;
-    width: 55%;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 1);
-    /* background: rgba(24, 20, 20, 1); */
+    justify-content: space-between;
+    height: 450px;
+    width: auto;
+    box-shadow: 15px 15px 30px #44281d,
+        -15px -15px 30px #97ce4c;
     background-image: linear-gradient(144deg, #97ce4c, #f0e14a 70%, #97ce4c);
     border-radius: 6rem;
     font-family: "get schwifty";
     flex-wrap: wrap;
+
 }
 
 .dataContainer {
-    display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    margin-left: 3rem;
 }
 
 .container h1 {
-    text-align: center;
+    text-align: left;
     color: black;
-    margin-left: 3rem;
     font-size: 30px;
 }
 
 .imgContainer img {
-    width: 490px;
-    margin-left: 3rem;
+    width: auto;
+    margin-right: 3rem;
+    margin-left: 2rem;
     border-radius: 3rem;
 }
 
 .div {
-
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

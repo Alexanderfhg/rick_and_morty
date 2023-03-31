@@ -12,6 +12,13 @@
     top: 0;
 }
 
+.searchBarContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+}
+
 .container button img {
     display: block;
     height: 140px;
@@ -39,23 +46,17 @@
 }
 
 .button {
-
-    transform: translateX(89rem);
-    display: flex;
     background-color: #5e4dcd;
     border: none;
     padding: 0.9rem;
     font-size: 0.7rem;
-    width: 6rem;
+    width: auto;
     border-radius: .7rem;
     color: white;
     cursor: pointer;
-    display: inline-block;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     height: 50px;
     font-size: medium;
-    margin-left: 1rem;
+    margin-right: 2rem;
 }
 
 .button:active {

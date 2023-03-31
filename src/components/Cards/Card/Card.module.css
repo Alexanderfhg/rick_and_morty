@@ -2,16 +2,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0%;
 }
 
 .card {
-    align-content: center;
-    background-color: #97ce4c;
     width: 300px;
-    height: 450px;
+    height: 400px;
     transition: all 0.2s;
     position: relative;
-    cursor: pointer;
     margin-left: 3.8rem;
     margin-top: 4rem;
     border-radius: 3rem;
@@ -19,12 +17,21 @@
         -15px -15px 30px #97ce4c;
     padding: 5px;
     background-image: linear-gradient(144deg, #97ce4c, #f0e14a 70%, #97ce4c);
+    align-items: center;
+    padding-bottom: 50px;
 }
 
 .card button h2 {
     font-family: "get schwifty";
     font-size: 35px;
-    margin-top: -.01rem;
+}
+
+.nameContainer {
+    display: flex;
+    height: 109px;
+    justify-content: center;
+    align-items: center;
+margin-top: 2.28rem;
 }
 
 .card:hover {
@@ -32,10 +39,9 @@
 }
 
 .cardImg {
-    margin-top: -1rem;
+    margin-bottom: -3rem;
     border-radius: 3rem;
-    margin-left: -.18rem;
-    width: 18.6rem;
+    margin-top: auto;
 }
 
 .closeButton {
@@ -47,6 +53,8 @@
     border-radius: 1.5rem;
     color: #97ce4c;
     cursor: pointer;
+    position: absolute;
+    left: 42.4%;
 }
 
 .closeButton:active {

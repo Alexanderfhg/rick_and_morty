@@ -1,9 +1,6 @@
 .input_group {
-    position: absolute;
+    position: relative;
     align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    margin-left: 55.2rem;
 }
 
 .input {

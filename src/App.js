@@ -14,8 +14,8 @@ function App() {
    const location = useLocation();
    const navigate = useNavigate();
 
-   const EMAIL = "0freddyherrera0@gmail.com";
-   const PASSWORD = "asdf321";
+   const EMAIL = "asdf@email.com";
+   const PASSWORD = "asdf123";
 
    function login(userData) {
       if (userData.email === EMAIL && userData.password === PASSWORD) {
@@ -37,11 +37,11 @@ function App() {
    //  Hay 826 personajes en total
    function onSearch(id) {
       let flag = true;
-      characters.map(character => {
-         if(character.id == id){
+      for (const character of characters) {
+         if(character.id === parseInt(id)){
             flag = false;
          }
-      })
+      }
 
       if(flag === true){
          fetch(`https://rickandmortyapi.com/api/character/${id}`)
@@ -56,8 +56,11 @@ function App() {
       } else {
          window.alert("Esta carta ya se encuentra en tu colección, ¡sigue buscando nuevas!")
       }
-      
+   }
 
+   function randomChar() {
+      const randomNumber = Math.floor(Math.random() * 826) + 1;
+      onSearch(randomNumber);
    }
 
    function onClose(id) {
@@ -66,7 +69,7 @@ function App() {
 
    return (
       <div className='App'>
-         {location.pathname !== '/' && <Nav logOut={logOut} onSearch={onSearch} />}
+         {location.pathname !== '/' && <Nav randomChar={randomChar} logOut={logOut} onSearch={onSearch} />}
          <Routes>
             <Route path="/" element={<Form login={login} />} />
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} />} />
