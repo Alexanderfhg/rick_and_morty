@@ -25,7 +25,8 @@ export default function Detail() {
                 <div className={styles.dataContainer}>
                     <h1>Name: {Character.name}</h1>
                     <h1>Status: {Character.status}</h1>
-                    <h1>Specie: {Character.species}</h1> 
+                    <h1>Specie: {Character.species}</h1>
+                    <h1>Origin: {Character.origin}</h1> 
                     <h1>Gender: {Character.gender}</h1>
                 </div>
                 <div className={styles.imgContainer}>
